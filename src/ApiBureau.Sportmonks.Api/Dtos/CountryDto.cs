@@ -1,5 +1,4 @@
-using SportMonks.Converters;
-using System.Text.Json.Serialization;
+using ApiBureau.Sportmonks.Api.Converters;
 
 namespace ApiBureau.Sportmonks.Api.Dtos;
 

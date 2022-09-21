@@ -1,5 +1,3 @@
-using SportMonks.Dtos.Core;
-
 namespace ApiBureau.Sportmonks.Api.Dtos.Core;
 
 public class SingleResponseDto<T> : BaseResponseDto

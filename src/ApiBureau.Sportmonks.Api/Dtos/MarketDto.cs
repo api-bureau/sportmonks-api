@@ -1,4 +1,4 @@
-namespace SportMonks.Dtos;
+namespace ApiBureau.Sportmonks.Api.Dtos;
 
 public class MarketDto : EntityIdDto<int>
 {

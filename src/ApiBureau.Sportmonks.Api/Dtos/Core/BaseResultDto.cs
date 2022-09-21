@@ -1,4 +1,4 @@
-namespace SportMonks.Dtos.Core;
+namespace ApiBureau.Sportmonks.Api.Dtos.Core;
 
 public class BaseResultDto
 {

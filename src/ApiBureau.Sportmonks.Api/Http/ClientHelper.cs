@@ -1,7 +1,7 @@
+using ApiBureau.Sportmonks.Api.Extensions;
+using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using SportMonks.Dtos.Core;
-using System.Text.Json;
 
 namespace ApiBureau.Sportmonks.Api.Http;
 

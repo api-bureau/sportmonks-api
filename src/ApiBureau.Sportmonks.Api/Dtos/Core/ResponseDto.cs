@@ -1,5 +1,3 @@
-using SportMonks.Dtos.Core;
-
 namespace ApiBureau.Sportmonks.Api.Dtos.Core;
 
 public class ResponseDto<T> : BaseResponseDto
@@ -8,10 +6,7 @@ public class ResponseDto<T> : BaseResponseDto
 
     public ResultDto<T> Result => new(Error, Data);
 
-    public ResponseDto()
-    {
-
-    }
+    public ResponseDto() { }
 
     public ResponseDto(ErrorResponseDto error) => Error = error;
 }

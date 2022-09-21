@@ -1,6 +1,4 @@
-using SportMonks.Dtos.Core;
-
-namespace SportMonks.Endpoints;
+namespace ApiBureau.Sportmonks.Api.Endpoints;
 
 public class GenericEndpoint<T>
 {

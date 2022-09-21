@@ -1,6 +1,4 @@
-﻿using System.Text.Json.Serialization;
-
-namespace SportMonks.Dtos;
+namespace ApiBureau.Sportmonks.Api.Dtos;
 
 public class CoverageDto
 {
