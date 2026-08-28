@@ -4,7 +4,7 @@ namespace ApiBureau.Sportmonks.Api.Converters;
 public class DateConverter : JsonConverter<DateTime>
 {
     public override DateTime Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
-        => DateTime.Parse(reader.GetString());
+        => DateTime.Parse(reader.GetString() ?? throw new JsonException("Expected a date string."));
 
     public override void Write(Utf8JsonWriter writer, DateTime value, JsonSerializerOptions options) => throw new NotImplementedException();
 }

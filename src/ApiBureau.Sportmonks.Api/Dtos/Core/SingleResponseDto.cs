@@ -2,7 +2,7 @@ namespace ApiBureau.Sportmonks.Api.Dtos.Core;
 
 public class SingleResponseDto<T> : BaseResponseDto
 {
-    public T Data { get; set; }
+    public T Data { get; set; } = default!;
 
     public SingleResultDto<T?> Result => new(Error, Data);
 

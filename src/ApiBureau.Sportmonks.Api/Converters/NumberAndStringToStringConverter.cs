@@ -8,7 +8,7 @@ public class NumberAndStringToStringConverter : JsonConverter<string>
 
         if (reader.TokenType == JsonTokenType.Number) return reader.GetInt64().ToString();
 
-        return reader.GetString();
+        return reader.GetString() ?? throw new JsonException("Expected a string or number.");
     }
 
     public override void Write(Utf8JsonWriter writer, string value, JsonSerializerOptions options) => throw new NotImplementedException();

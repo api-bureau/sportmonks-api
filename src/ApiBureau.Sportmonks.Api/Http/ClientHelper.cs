@@ -13,10 +13,10 @@ public class ClientHelper
     private readonly JsonSerializerOptions _jsonSerializerOptions = new JsonSerializerOptions
     {
         AllowTrailingCommas = true,
-        IgnoreNullValues = true,
+        DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
         PropertyNameCaseInsensitive = true
     };
-    private Dictionary<string, string> _queryString = new();
+    private Dictionary<string, string?> _queryString = new();
 
     public ClientHelper(ILogger<ClientHelper> logger, HttpClient client, IOptions<SportmonksSettings> settings)
     {
@@ -142,7 +142,7 @@ public class ClientHelper
             _logger.LogError(
                 "SportMonksSettings needs to be added and initialised Configuration.GetSection(nameof(SportMonksSettings).");
         else
-            _queryString = new Dictionary<string, string>
+            _queryString = new Dictionary<string, string?>
             {
                 {"api_token", _settings.ApiToken},
                 {"tz", _settings.Timezone},
